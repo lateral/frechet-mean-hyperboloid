@@ -123,21 +123,6 @@ def to_hyperboloid_point(poincare_pt):
     """
     return to_hyperboloid_points(poincare_pt[np.newaxis,:])[0,:]
 
-def basepoint(dimension):
-    """
-    Return the basepoint of the hyperboloid with specified local dimension.
-    Post: len(result) == dimension + 1
-    """
-    return np.eye(dimension + 1)[dimension,:]
-
-def basepoint_tangent(i, dimension):
-    """
-    Return the ith basis vector of the tangent space of the basepoint of the
-    hyperboloid with specified local dimension.
-    Post: len(result) == dimension + 1
-    """
-    return np.eye(dimension + 1)[i,:]
-
 def hyperboloid_circle(centrept, radius, number_points):
     """
     Return a list points on the 2-dimensional hyperboloid tracing out a circle
